@@ -25,7 +25,7 @@ h1{
     min-width: 90px;
     margin: 0 10px;
     border-radius: 250px;
-    background-color: red
+    background-color: red;
 }
 .choices button:hover{
     background-color: hsl(337, 96%, 83%);
