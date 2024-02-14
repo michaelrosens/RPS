@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- title     -->
+    <h1>Rock - Paper - Scissors</h1> 
+<!-- title end    -->
+<!-- choices/buttons -->
+    <div class="choices">
+        <button onclick="playGame('rock')">🪨</button>
+        <button onclick="playGame('paper')">📝</button>
+        <button onclick="playGame('scissors')">✂️</button>
+    </div>
+<!-- choices/buttons end -->
+<!-- what player/ computer chose shown on screen  -->
+    <div id="playerDisplay">PLAYER: </div>
+    <div id="computerDisplay">COMPUTER: </div>
+    <div id="resultDisplay"></div>
+<!-- what player/ computer chose shown on screen end -->
+<!-- Scoreboard -->
+    <div class="scoreDisplay">Player Score: 
+        <span id="playerScoreDisplay">0</span>
+    </div>
+
+    <div class="scoreDisplay">Computer Score: 
+        <span id="computerScoreDisplay">0</span>
+    </div>
+<!-- scoreboard -->
+    <script src="index.js"></script>
+</body>
+</html>
