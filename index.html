@@ -1,38 +1,39 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPS</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bahianita&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bahianita&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h1>Rock Paper Scissors</h1> 
-    <div class="choices">
-        <button onclick="playGame('rock')">🪨</button>
-        <button onclick="playGame('paper')">📝</button>
-        <button onclick="playGame('scissors')">✂️</button>
-    </div>
-    <div id="playerDisplay">PLAYER: </div>
-    <div id="computerDisplay">COMPUTER: </div>
-    <div id="resultDisplay"></div>
-    <div class="scoreDisplay">Player Score: 
-        <span id="playerScoreDisplay">0</span>
-    </div>
 
-    <div class="scoreDisplay">Computer Score: 
-        <span id="computerScoreDisplay">0</span>
-    </div>
-<!-- scoreboard -->
-    <script src="index.js"></script>
-</body>
+    <body>
+        <h1>Rock Paper Scissors</h1>
+        <div class="choices">
+            <button onclick="playGame('rock')">🪨</button>
+            <button onclick="playGame('paper')">📝</button>
+            <button onclick="playGame('scissors')">✂️</button>
+        </div>
+        <div id="resultDisplay"></div>
+        <div class="scoreboard">
+            <div class="score p-score">Player: <span id="playerScore">0</span></div>
+            <div class="score c-score">Computer: <span id="computerScore">0</span></div>
+        </div>
+        <button id="resetButton" class="reset-button" onclick="resetScore()">
+            Reset
+        </button>
+        <!-- scoreboard -->
+        <script src="index.js"></script>
+    </body>
+
 </html>
