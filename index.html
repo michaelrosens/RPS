@@ -15,24 +15,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bahianita&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zeyada&display=swap" rel="stylesheet">
 </head>
 
     <body>
         <h1>Rock Paper Scissors</h1>
         <div class="choices">
-            <button onclick="playGame('rock')">🪨</button>
-            <button onclick="playGame('paper')">📝</button>
-            <button onclick="playGame('scissors')">✂️</button>
+            <button class="choicesbutton" onclick="playGame('rock')">🪨</button>
+            <button class="choicesbutton" onclick="playGame('paper')">📝</button>
+            <button class="choicesbutton" onclick="playGame('scissors')">✂️</button>
         </div>
         <div id="resultDisplay"></div>
         <div class="scoreboard">
             <div class="score p-score">Player: <span id="playerScore">0</span></div>
             <div class="score c-score">Computer: <span id="computerScore">0</span></div>
-        </div>
-        <button id="resetButton" class="reset-button" onclick="resetScore()">
-            Reset
-        </button>
-        <!-- scoreboard -->
+        <div>
+            <button id="resetButton" class="reset-button choicesbutton" onclick="resetScore()">
+                Reset
+            </button>
+                </div>
+                </div>
+     
         <script src="index.js"></script>
     </body>
 
