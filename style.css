@@ -1,12 +1,13 @@
 body{
-    background: linear-gradient(to right, red, rgb(111, 2, 150));
+    background: linear-gradient(to right,#4facfe, #00f2fe);
     padding-top: 50px;
     font-weight: bold;
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: "Zeyada", cursive;
+    font-family: 'Roboto Condensed', sans-serif;
+    
 }
 
 
@@ -61,8 +62,8 @@ h1{
     background: linear-gradient(to right, whitesmoke, gray);
     transform: scale(1);
     transition: transform ease 1s;
-    font-family: "Zeyada", cursive;
-    cursor: pointer;
+    font-family: 'Roboto Condensed', sans-serif;
+
 }
 .choices button:hover{
     background-color: white;
