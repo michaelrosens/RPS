@@ -66,6 +66,10 @@ h1{
 
 }
 .choices button:hover{
-    background-color: white;
+    background-color: black;
     transform: scale(0.89);
 }
+
+#resultDisplay {
+    font-size: 36px; /* Adjust the font size to your preference */
+  }

@@ -5,6 +5,7 @@
 
       let playerPoints = 0;
       let computerPoints = 0;
+      let tiePoints = 0;
 
       function computerSelection() {
         const choices = ['rock', 'paper', 'scissors'];
@@ -41,11 +42,18 @@
           computerPoints++;
           computerScore.textContent = computerPoints;
         }
+        else {
+            tiePoints++; 
+            tieScore.textContent = tiePoints; 
+        }
       }
 
       function resetScore() {
         playerPoints = 0;
         computerPoints = 0;
+        tiePoints = 0;
         playerScore.textContent = 0;
         computerScore.textContent = 0;
+        tieScore.textContent = 0;
+
       }
