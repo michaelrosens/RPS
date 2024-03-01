@@ -1,4 +1,4 @@
-const name = prompt('Please enter your name:');
+const playerName = prompt('Please enter your name:');
 
 const resultDisplay = document.getElementById("resultDisplay");
 const playerScore = document.getElementById("playerScore");
