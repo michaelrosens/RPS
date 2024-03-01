@@ -1,4 +1,3 @@
-
 const name = prompt('Please enter your name:');
 
 const resultDisplay = document.getElementById("resultDisplay");
@@ -15,13 +14,12 @@ function computerSelection() {
   const randomIndex = Math.floor(Math.random() * 3);
   return choices[randomIndex];
 }
+
 function game(playerChoice, computerChoice, playerName) {
   let result;
 
   if (playerChoice === computerChoice) {
     result = { message: "Tie!", computerChoice };
-    tiePoints++;
-    tieScore.textContent = tiePoints; 
   } else if (
     (playerChoice === "rock" && computerChoice === "scissors") ||
     (playerChoice === "paper" && computerChoice === "rock") ||
@@ -30,24 +28,40 @@ function game(playerChoice, computerChoice, playerName) {
     result = { message: `${playerName} wins!`, computerChoice };
     playerPoints++;
     playerScore.textContent = playerPoints;
-
   } else {
     result = { message: `Computer wins!`, computerChoice };
-    computerPoints++;
-    computerScore.textContent = computerScore;
   }
 
   return result;
 }
+
 const tieScore = document.getElementById("tieScore");
 
+function playGame(playerChoice) {
+  const computerChoice = computerSelection();
+  const result = game(playerChoice, computerChoice, name);
+
+  resultDisplay.textContent = `${result.message} Computer chose ${result.computerChoice}`;
+
+  if (result.message.includes("Player wins")) {
+    playerPoints++;
+    playerScore.textContent = playerPoints;
+  } else if (result.message.includes("Computer wins")) {
+    computerPoints++;
+    computerScore.textContent = computerPoints;
+  } else {
+    tiePoints++;
+    tieScore.textContent = tiePoints;
+  }
+  endGame();
+}
 
 function endGame() {
   if (playerPoints === 3) {
-    resultDisplay.textContent = `${name} wins overall!`;
+    resultDisplay.textContent = `${playerName} wins overall! ${playerName} Score: ${playerPoints}, Computer Score: ${computerPoints}, Tie Score: ${tiePoints}`;
     resetScore();
   } else if (computerPoints === 3) {
-    resultDisplay.textContent = `Computer wins overall!`;
+    resultDisplay.textContent = `Computer wins overall! ${playerName} Score: ${playerPoints}, Computer Score: ${computerPoints}, Tie Score: ${tiePoints}`;
     resetScore();
   }
 }
@@ -60,3 +74,4 @@ function resetScore() {
   computerScore.textContent = 0;
   tieScore.textContent = 0;
 }
+
