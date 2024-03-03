@@ -39,7 +39,7 @@ const tieScore = document.getElementById("tieScore");
 
 function playGame(playerChoice) {
   const computerChoice = computerSelection();
-  const result = game(playerChoice, computerChoice, name);
+  const result = game(playerChoice, computerChoice, playerName);
 
   resultDisplay.textContent = `${result.message} Computer chose ${result.computerChoice}`;
 
@@ -53,6 +53,7 @@ function playGame(playerChoice) {
     tiePoints++;
     tieScore.textContent = tiePoints;
   }
+
   endGame();
 }
 
@@ -74,4 +75,3 @@ function resetScore() {
   computerScore.textContent = 0;
   tieScore.textContent = 0;
 }
-
