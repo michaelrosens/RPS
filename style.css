@@ -50,15 +50,22 @@ h1 {
   height: 50px;
   margin: 10px;
   line-height: 1;
-  font-size: 40px;
+  font-size: 2vw; /* Adjust as needed */
   min-width: 90px;
-  margin: 0 10px;
+  margin: 0 10px; /* Keep the existing margin */
   border-radius: 250px;
   background: linear-gradient(to right, whitesmoke, gray);
   transform: scale(1);
   transition: transform ease 1s;
   font-family: "Roboto Condensed", sans-serif;
 }
+
+@media (max-width: 768px) {
+  .choicesbutton {
+    font-size: 3vw; /* Adjust as needed */
+  }
+}
+
 .choices button:hover {
   background-color: black;
   transform: scale(0.89);
